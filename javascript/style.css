@@ -1,0 +1,145 @@
+:root {
+    background-color: darkslateblue;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container-fluid {
+    background-color: darkslateblue;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: darkslateblue;
+}
+
+header, section {
+    padding: 1rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+.list-container {
+    background-color: gold;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.tasks-container {
+    background-color: white;
+    border-radius: 1rem;
+}
+
+#new-task-input {
+    flex: 1 1 50%;
+}
+
+input, button {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+#new-task-submit {
+    background-color: darkorange;
+    color: white;
+    border-radius: 0.5rem;
+    position: relative;
+    top: 0;
+    transition: top 0.2s ease;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#new-task-submit:hover {
+    background-color: white;
+    color: darkorange;
+    top: -5px;
+}
+
+.tasks-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.task-filter {
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+}
+
+.todo-list {
+    list-style: none;
+    padding-left: 0rem;
+}
+
+.todoDiv {
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+    background: gainsboro;
+    margin-bottom: 0.3rem;
+    border-radius: 0.5rem;
+}
+
+.todo-task {
+    flex: 1 1 0%;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.task-date-num {
+    color: darkorange;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.3;
+}
+
+.check-button, .delete-button, .edit-button {
+    border-radius: 0.5rem;
+    position: relative;
+    top: 0;
+    transition: top 0.2s ease;
+    background-color: transparent;
+}
+
+.fa-check, .fa-trash, .fa-plus, .fa-pencil-alt {
+    pointer-events: none;
+}
+
+.check-button:hover {
+    color: green;
+    top: -3px;
+}
+
+.delete-button:hover {
+    color: red;
+    top: -3px;
+}
+
+.edit-button:hover {
+    color: blue;
+    top: -3px;
+}
+
+.delete-animation {
+    transform: translateY(3rem);
+    opacity: 0;
+}

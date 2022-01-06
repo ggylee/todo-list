@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/4c3672301e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="list-container col-lg-7">
+      <header>
+        <h1>To-Do List</h1>
+        <form class="row">
+          <input id="new-task-date" class="my-1" type="date" />
+          <input id="new-task-input" class="mx-2 my-1" type="text" placeholder="Add task..." />
+          <button id="new-task-submit" class="my-1" type="submit">
+            <i class="fas fa-plus"></i>
+          </button>
+        </form>
+      </header>
+
+      <main>
+        <section class="tasks-container">
+        <div class="tasks-header">
+          <h2>Tasks</h2>
+          <div>
+              <select class="task-filter">
+                  <option>All</option>
+                  <option>Outstanding</option>
+                  <option>Completed</option>
+                  <option>Sort by date</option>
+              </select>
+          </div>
+        </div>
+          <div>
+            <ul class="todo-list"></ul>
+          </div>
+        </section>
+      </main>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

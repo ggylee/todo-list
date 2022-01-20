@@ -15,7 +15,7 @@ taskSubmit.addEventListener('click', addToDo);
 
 // FUNCTIONS
 
-let counter = 666;
+let counter = 0;
 const todos = [];
 
 //dateArray = [];
@@ -51,7 +51,7 @@ function render() {
     
         const task = document.createElement("li");
         task.classList.add("todo-task");
-        task.innerText = todos[i].myDate + ": " + todos[i].description;
+        task.innerText = dateFormat(todos[i].myDate) + ": " + todos[i].description;
         todoDiv.appendChild(task);
     
         //dateArray.push(taskDateNum);
@@ -91,22 +91,24 @@ function dateFormat(date) {
 }
 
 function addTodoToArray() {
-    // add to the array
 
     const newObj = {
         todoId: counter += 1,
-        myDate: dateFormat(taskDate.value),
+        myDate: taskDate.value,
         description: taskInput.value
     }
     todos.push(newObj);
 
-    // SORT ORDER OF ARRAY BY DATE HERE??
+    sortMyArray();
 
     render();
 }
 
+function sortMyArray() {
+    todos.sort((a,b) => new Date(a.myDate) - new Date(b.myDate));
+}
+
 function deleteTodoFromArray(todoIdIClickedOnToDelete) {
-    // remove from the array
     console.log("Delete", todoIdIClickedOnToDelete)
 
     for (let i = 0; i < todos.length; i++) {
